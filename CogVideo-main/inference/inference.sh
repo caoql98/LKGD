@@ -1,0 +1,2 @@
+python cli_demo.py --prompt "fluid simulation" --model_path THUDM/CogVideoX-5b-I2V --generate_type "i2v" --image_or_video_path "data/fluid_videos/cylinder_vision/test_imgs/375.jpg" --num_frames 49 --output_path "fluid_videos/cylinder_vision/375.mp4"
+# python cli_demo.py --prompt "A girl riding a bike." --model_path THUDM/CogVideoX-5b --generate_type "t2v"
