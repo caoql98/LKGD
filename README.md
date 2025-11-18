@@ -7,7 +7,7 @@ Codes for Latent Knowledge-Guided Video Diffusion for Scientific Phenomena Gener
 cd svd-train-main/train_models
 bash train_scripts/train_svd_lora.sh
 ```
-### Projecdt Page
+### Project Page
 ```
 https://qinglongcao.xyz/LKGD-Diffusion.github.io/
 ```
