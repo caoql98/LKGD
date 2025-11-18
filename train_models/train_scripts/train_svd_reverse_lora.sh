@@ -1,0 +1,19 @@
+accelerate launch --multi_gpu --num_processes 4 train_svd_reverse_lora.py \
+ --pretrained_model_name_or_path="/root/data/juicefs_sharing_data/11162591/code/models/stabilityai/stable-video-diffusion-img2vid" \
+ --output_dir="output_svd_reverse_lora" \
+ --validation_image="data/test_images/walk.jpg" \
+ --width=576 \
+ --height=320 \
+ --learning_rate=2e-4 \
+ --per_gpu_batch_size=2 \
+ --num_train_epochs=1 \
+ --mixed_precision="fp16" \
+ --gradient_accumulation_steps=2 \
+ --checkpointing_steps=500 \
+ --validation_steps=400 \
+ --gradient_checkpointing \
+ --conditioning_channels=4 \
+ --rank 16 \
+ --mix_webvid 2000000 \
+ --resume_from_checkpoint latest \
+ --report_to wandb \

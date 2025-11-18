@@ -1,0 +1,9 @@
+annotation_files:
+- /home/bml/storage/mnt/v-95c5b44cfcff4e6c/org/data_lxr/svd-train/train_models/train_configs/DAVIS_val.json
+text_annotation: /home/bml/storage/mnt/v-95c5b44cfcff4e6c/org/data_lxr/svd-train/train_models/train_configs/DAVIS_prompt.json
+bucket_root: /home/bml/storage/mnt/v-95c5b44cfcff4e6c/org/data_lxr/data/DAVIS
+points_root: cotracker
+image_root: JPEGImages/480p
+mask_root: Annotations/480p
+min_dist: 1
+max_dist: 24

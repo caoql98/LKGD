@@ -1,0 +1,27 @@
+accelerate launch --multi_gpu --num_processes 4 --main_process_port 32500 train_svd_trans_lora_v2.py \
+ --pretrained_model_name_or_path="/data/vjuicefs_ai_camera_lgroup/11162591/gsy_workdir/hf_models_backup/stabilityai/stable-video-diffusion-img2vid-xt" \
+ --video_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/pandas70m" \
+ --output_dir "output_dir/output_svdxt_translation_lora_noflip_temporal_nospatial" \
+ --condition_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/pandas70m" \
+ --validation_image_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/DAVIS/JPEGImages/walking" \
+ --validation_control_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/DAVIS/OpticalFlows/480p/walking" \
+ --width=512 \
+ --height=320 \
+ --learning_rate=1e-4 \
+ --per_gpu_batch_size=1 \
+ --num_train_epochs=1 \
+ --mixed_precision="fp16" \
+ --gradient_accumulation_steps=2 \
+ --checkpointing_steps=500 \
+ --validation_steps=400 \
+ --gradient_checkpointing \
+ --conditioning_channels=4 \
+ --rank 64 \
+ --report_to wandb \
+ --mix_webvid 2000000 \
+ --checkpoints_total_limit 1 \
+ --include_temporal \
+ --without_spatial \
+ --num_frames 25 \
+ --fps_high 30 \
+ --resume_from_checkpoint output_dir/output_svdxt_translation_lora_noflip_temporal_nospatial/checkpoint-13500

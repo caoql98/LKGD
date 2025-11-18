@@ -1,0 +1,24 @@
+accelerate launch --multi_gpu --num_processes 4 --main_process_port 30500 train_svd_of_lora.py \
+ --pretrained_model_name_or_path="/root/data/juicefs_sharing_data/11162591/code/models/stabilityai/stable-video-diffusion-img2vid" \
+ --output_dir="output_joint_video_flow" \
+ --video_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/pandas70m" \
+ --condition_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/pandas70m" \
+ --validation_image_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/DAVIS/JPEGImages/walking" \
+ --validation_control_folder="/data/vjuicefs_ai_camera/11162591/public_datasets/DAVIS/OpticalFlows/480p/walking" \
+ --width=576 \
+ --height=320 \
+ --learning_rate=1e-4 \
+ --per_gpu_batch_size=1 \
+ --num_train_epochs=1 \
+ --mixed_precision="fp16" \
+ --gradient_accumulation_steps=2 \
+ --checkpointing_steps=2000 \
+ --validation_steps=400 \
+ --gradient_checkpointing \
+ --conditioning_channels=4 \
+ --train_flow_diffusion \
+ --y_lora "/data/juicefs_sharing_data/11162591/code/lxr/svd-train/trained_models/flow_df/pytorch_lora_weights.safetensors" \
+ --y_head "/data/juicefs_sharing_data/11162591/code/lxr/svd-train/trained_models/flow_df/unet.pth" \
+ --mix_webvid 100000 \
+ --report_to wandb
+# --resume_from_checkpoint latest
