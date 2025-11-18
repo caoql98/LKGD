@@ -1,0 +1,3 @@
+bash train_ddp_i2v_fluid_Bernard.sh
+bash train_ddp_i2v_fluid_damBreak.sh
+bash train_ddp_i2v_fluid_depthCharge.sh

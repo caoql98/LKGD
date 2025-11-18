@@ -1,0 +1,4 @@
+bash train_ddp_i2v_typhoon_202001.sh
+bash train_ddp_i2v_typhoon_202009.sh
+bash train_ddp_i2v_typhoon_202102.sh
+bash train_ddp_i2v_typhoon_202204.sh
