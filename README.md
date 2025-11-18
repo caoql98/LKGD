@@ -1,2 +1,2 @@
 # TVML
-Teach Video Diffusion Model with Latent Physical Phenomenon Knowledge
+Latent Knowledge-Guided Video Diffusion for Scientific Phenomena Generation from a Single Initial Frame
