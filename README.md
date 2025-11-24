@@ -11,3 +11,9 @@ bash train_scripts/train_svd_lora.sh
 ```
 https://qinglongcao.xyz/LKGD-Diffusion.github.io/
 ```
+
+
+### Datasets and Data Preparation
+The Utilized Datasets (Fluid & Typhoon)
+
+Google Driver  [**Datasets**](https://drive.google.com/file/d/1r_qOeB2wcPAdSIplS44hUofWX-fXEtCQ/view?usp=drive_link)
